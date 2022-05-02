@@ -47,11 +47,9 @@ curl --location --request POST 'http://127.0.0.1:8000/' \
 1. Only Orca Scan system fields start with `___`
 2. Properties in the JSON payload are an exact match to the  field names in your sheet _(case and space)_
 
-## Example
+## Validation example
 
 This [example](server.php) uses the [Laravel](https://laravel.com/) framework:
-
-### Validation example 
 
 ```php
 if (preg_match('/$/', $_SERVER["REQUEST_URI"])){
