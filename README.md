@@ -54,7 +54,30 @@ This [example](server.php) uses the [Laravel](https://laravel.com/) framework:
 ### Validation example 
 
 ```php
+if (preg_match('/$/', $_SERVER["REQUEST_URI"])){
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $data = json_decode(file_get_contents('php://input'), true);
 
+        // NOTE:
+        // orca system fields start with ___
+        // you can access the value of each field using the field name (data.Name, data.Barcode, data.Location)        $name = $data["Name"];
+        $name = $data["Name"];
+
+        // validation example
+        if (strlen($name) < 20) {
+            // return json error message
+            echo json_encode(array(
+                "title" => "Invalid Name",
+                "message" => "Name cannot contain more than 20 characters"
+            ));
+            exit;
+        }
+
+        //return HTTP Status 204 (No Content)
+        http_response_code(204);
+        exit;
+    }
+}
 ```
 ## Test server locally against Orca Cloud
 
