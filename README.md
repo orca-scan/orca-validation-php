@@ -39,7 +39,7 @@ curl --location --request POST 'http://127.0.0.1:8000/' \
     "___orca_user_email": "hidden@requires.https",
     "Barcode": "orca-scan-test",
     "Date": "2022-04-19T16:45:02.851Z",
-    "Name": Orca Scan Validation Example,
+    "Name": "Orca Scan Validation"
 }'
 ```
 ### Important things to note
@@ -62,7 +62,7 @@ if (preg_match('/$/', $_SERVER["REQUEST_URI"])){
         $name = $data["Name"];
 
         // validation example
-        if (strlen($name) < 20) {
+        if (strlen($name) > 20) {
             // return json error message
             echo json_encode(array(
                 "title" => "Invalid Name",

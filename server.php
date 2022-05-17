@@ -10,7 +10,7 @@ if (preg_match('/$/', $_SERVER["REQUEST_URI"])){
         $name = $data["Name"];
 
         // validation example
-        if (strlen($name) < 20) {
+        if (strlen($name) > 20) {
             // return json error message
             echo json_encode(array(
                 "title" => "Invalid Name",
