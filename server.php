@@ -19,8 +19,8 @@ if (preg_match('/$/', $_SERVER["REQUEST_URI"])){
             exit;
         }
 
-        //return HTTP Status 204 (No Content)
-        http_response_code(204);
+        //return HTTP Status 200 with no body
+        http_response_code(200);
         exit;
     }
 }
