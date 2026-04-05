@@ -122,10 +122,6 @@ Set a secret in Orca Scan (Integrations > Events API > Secret) and Orca Scan wil
 | PHP      | [orca-validation-php](https://github.com/orca-scan/orca-validation-php)       |
 | Node.js  | [orca-validation-node](https://github.com/orca-scan/orca-validation-node)     |
 
-## History
-
-For change-log, check [releases](https://github.com/orca-scan/orca-validation-php/releases).
-
 ## License
 
 &copy; Orca Scan, the [Barcode Scanner app for iOS and Android](https://orcascan.com).
